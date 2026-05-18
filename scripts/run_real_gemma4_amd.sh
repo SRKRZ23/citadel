@@ -1,10 +1,12 @@
 #!/bin/bash
-# CITADEL — Real Gemma 4 27B benchmark on AMD MI300X
+# CITADEL — Real Gemma benchmark on AMD MI300X
 # Submitted to the Gemma 4 Good Hackathon, May 2026.
 # Author: Sardor Razikov.
 # Gemma is a trademark of Google LLC.
 
 set -e
+set -o pipefail  # crucial: ensures pipelines (e.g. ollama pull | tee) return the
+                 # failing-command's exit code, not just tee's success.
 echo "=========================================="
 echo "CITADEL REAL GEMMA 4 BENCHMARK — AMD MI300X"
 echo "=========================================="
@@ -32,25 +34,41 @@ sleep 5
 # Verify daemon up
 curl -sf http://localhost:11434/api/tags > /dev/null && echo "Ollama daemon ready" || (echo "ERROR: Ollama daemon not responding" && exit 1)
 
-# --- 3. Pull Gemma 4 -------------------------------------------------------
+# --- 3. Pull Gemma --------------------------------------------------------
 echo ""
-echo "[3/6] Pulling Gemma model (Gemma 4 if available, else Gemma 3 27B as fallback)..."
+echo "[3/6] Pulling Gemma model..."
 ollama list
 
-# Try the newest available Gemma variant; fall back through the family.
-for MODEL in gemma-4:27b gemma4:27b gemma-3:27b gemma3:27b gemma2:27b; do
-    if ollama pull "$MODEL" 2>&1 | tee /tmp/pull.log; then
-        export CITADEL_MODEL="$MODEL"
-        echo "Successfully pulled: $MODEL"
-        break
-    fi
-done
+# Allow caller to override the model via CITADEL_MODEL env var. Otherwise
+# walk the Gemma family from newest tag downward; first successful pull wins.
+# As of May 2026, gemma3:27b is the largest Gemma family member in the
+# Ollama library; Gemma 4 weights are not yet packaged for Ollama at the time
+# of this hackathon submission, so the infrastructure is validated on
+# gemma3:27b and is model-agnostic via the OllamaAdapter interface — the
+# same code will run against gemma-4:27b once it ships in the library.
+CITADEL_MODEL="${CITADEL_MODEL:-}"
+
+if [ -z "${CITADEL_MODEL}" ]; then
+    for MODEL in gemma-4:27b gemma4:27b gemma3:27b gemma3:12b gemma2:27b gemma2:9b; do
+        echo "  Trying: $MODEL"
+        if ollama pull "$MODEL"; then
+            CITADEL_MODEL="$MODEL"
+            echo "  Successfully pulled: $MODEL"
+            break
+        else
+            echo "  Not available: $MODEL"
+        fi
+    done
+else
+    echo "  Using caller-supplied model: $CITADEL_MODEL"
+    ollama pull "$CITADEL_MODEL"
+fi
 
 if [ -z "${CITADEL_MODEL:-}" ]; then
     echo "ERROR: Could not pull any Gemma model from Ollama"
     exit 1
 fi
-
+export CITADEL_MODEL
 echo "CITADEL_MODEL=$CITADEL_MODEL"
 
 # --- 4. Verify CITADEL repo ----------------------------------------------

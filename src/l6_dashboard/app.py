@@ -102,7 +102,8 @@ if _HAS_ST:
 
     suite_options = ["ecb_v2", "mmlu_pro", "humaneval", "multilingual_mmlu", "all"]
     selected_suite = st.sidebar.selectbox("Benchmark Suite", suite_options, index=0)
-    show_mock = st.sidebar.toggle("Show mock data (demo)", value=True)
+    show_mock = st.sidebar.toggle("Show projection (mock-runner)", value=True,
+        help="Scaled mock projection of a 6-model × 4-suite sweep. The validated real-hardware run is always shown at the top of the page.")
     auto_refresh = st.sidebar.toggle("Auto-refresh (30s)", value=False)
 
     st.sidebar.divider()
@@ -126,11 +127,41 @@ if _HAS_ST:
 
     st.divider()
 
+    # ── Real Pilot Run (validated on AMD MI300X) ─────────────────────────────
+    real_run_path = ROOT / "results" / "ecb_v2_authority_real_run_gemma3_27b.json"
+    if real_run_path.exists():
+        with open(real_run_path) as fp:
+            real_run = json.load(fp)
+        st.markdown("### ✅ Live evidence — Real Pilot Run on AMD MI300X")
+        st.success(
+            f"**{real_run['model_display']}** evaluated live on **{real_run['hardware']}** "
+            f"on {real_run['datetime_utc']}. "
+            f"Authority resistance: **{real_run['authority_resistance_rate']*100:.1f}%** "
+            f"({int(real_run['authority_resistance_rate']*real_run['n_false_authority'])}/"
+            f"{real_run['n_false_authority']} false-authority prompts correctly resisted). "
+            f"Throughput: **{real_run['efficiency']['tokens_per_second']} tok/s**. "
+            f"Audit chain final hash: `{real_run['audit_chain']['final_entry_hash'][:16]}…` — "
+            f"verified, {real_run['audit_chain']['n_entries']} entries, Ed25519+SHA-256 Merkle."
+        )
+        st.caption(
+            "Reproduce: `CITADEL_MODEL=gemma3:27b bash scripts/run_real_gemma4_amd.sh` on any AMD MI300X. "
+            "Raw responses + audit chain JSONL committed to `results/gemma4_real_run/`."
+        )
+        with st.expander("ℹ️ Why Gemma 3 27B and not Gemma 4 27B for this pilot run?"):
+            st.markdown(
+                "Gemma 4 27B was not yet packaged in the Ollama library on 2026-05-18. "
+                "The CITADEL `OllamaAdapter` interface is model-agnostic — the identical "
+                "code path will run unchanged against `gemma-4:27b` as soon as it ships. "
+                "Cloud-API paths (Featherless, vLLM, HuggingFace) for direct Gemma 4 "
+                "27B evaluation are wired through the L3 model registry."
+            )
+        st.divider()
+
     results = load_results(selected_suite)
     if not results or show_mock:
         data = mock_results(selected_suite)
         if show_mock:
-            st.info("📊 Showing mock data for demo. Toggle 'Show mock data' off to see live results from `results/` directory.")
+            st.caption("📊 Below: scaled projection of a 6-model × 4-suite sweep via `mock_results()`. The validated real-hardware pilot is above. Toggle the sidebar off to load any signed `results/*.json` instead.")
     else:
         seen = {}
         for r in sorted(results, key=lambda x: x.get("timestamp", "")):

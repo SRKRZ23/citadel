@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+  <!-- Transparent background -->
+  <rect width="150" height="150" fill="none"/>
+
+  <!-- Circle backdrop -->
+  <circle cx="75" cy="75" r="68" fill="#059669" opacity="0.9"/>
+  <circle cx="75" cy="75" r="68" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/>
+
+  <!-- SR monogram -->
+  <text x="75" y="100" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900" font-size="60" fill="#FFFFFF" text-anchor="middle" letter-spacing="-3">SR</text>
+</svg>

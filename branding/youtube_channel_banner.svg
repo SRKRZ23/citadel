@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="1152" viewBox="0 0 2048 1152">
+  <!-- Background -->
+  <rect width="2048" height="1152" fill="#0A0A0A"/>
+
+  <defs>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0A0A0A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="2048" height="1152" fill="url(#grid)"/>
+  <rect width="2048" height="1152" fill="url(#accentGrad)"/>
+
+  <!-- Left accent stripe -->
+  <rect x="0" y="0" width="8" height="1152" fill="#059669"/>
+
+  <!-- Top label -->
+  <text x="120" y="100" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="22" fill="#059669" letter-spacing="6">INDEPENDENT AI / ML ENGINEER · RESEARCHER · FOUNDER</text>
+
+  <!-- BIG NAME -->
+  <text x="120" y="280" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900" font-size="180" fill="#FFFFFF" letter-spacing="-2">SARDOR RAZIKOV</text>
+
+  <!-- Tashkent + tagline -->
+  <text x="120" y="340" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="500" font-size="32" fill="#888" letter-spacing="2">Tashkent, Uzbekistan · Building open AI safety, evaluation, and edtech infrastructure</text>
+
+  <!-- VERIFIED CREDENTIALS row -->
+  <text x="120" y="430" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="16" fill="#5A5A5A" letter-spacing="4">VERIFIED · CITABLE · REPRODUCIBLE</text>
+
+  <g transform="translate(120, 460)">
+    <!-- CVPR -->
+    <rect x="0" y="0" width="280" height="90" fill="#0F1E3D" stroke="#2563EB" stroke-width="2" rx="6"/>
+    <text x="140" y="36" font-family="-apple-system, sans-serif" font-weight="900" font-size="32" fill="#2563EB" text-anchor="middle">#2 / 56</text>
+    <text x="140" y="56" font-family="-apple-system, sans-serif" font-weight="500" font-size="11" fill="#888" text-anchor="middle" letter-spacing="2">CVPR 2026 GAIT</text>
+    <text x="140" y="72" font-family="-apple-system, sans-serif" font-weight="400" font-size="10" fill="#666" text-anchor="middle">sub40 = 0.90271</text>
+
+    <!-- Kaggle SPR -->
+    <rect x="300" y="0" width="280" height="90" fill="#1A0F00" stroke="#FF8C00" stroke-width="2" rx="6"/>
+    <text x="440" y="36" font-family="-apple-system, sans-serif" font-weight="900" font-size="32" fill="#FF8C00" text-anchor="middle">#7 / 371</text>
+    <text x="440" y="56" font-family="-apple-system, sans-serif" font-weight="500" font-size="11" fill="#888" text-anchor="middle" letter-spacing="2">KAGGLE SPR 2026</text>
+    <text x="440" y="72" font-family="-apple-system, sans-serif" font-weight="400" font-size="10" fill="#666" text-anchor="middle">Top 1.9% · Medical AI</text>
+
+    <!-- ECB Zenodo -->
+    <rect x="600" y="0" width="280" height="90" fill="#0F2D0F" stroke="#00CC66" stroke-width="2" rx="6"/>
+    <text x="740" y="36" font-family="-apple-system, sans-serif" font-weight="900" font-size="22" fill="#00CC66" text-anchor="middle">ECB · ZENODO</text>
+    <text x="740" y="56" font-family="-apple-system, sans-serif" font-weight="500" font-size="11" fill="#888" text-anchor="middle" letter-spacing="2">DOI 10.5281</text>
+    <text x="740" y="72" font-family="-apple-system, sans-serif" font-weight="400" font-size="10" fill="#666" text-anchor="middle">Curie Temperature for LLMs</text>
+
+    <!-- ORCID -->
+    <rect x="900" y="0" width="280" height="90" fill="#2A0F1F" stroke="#E91E63" stroke-width="2" rx="6"/>
+    <text x="1040" y="36" font-family="-apple-system, sans-serif" font-weight="900" font-size="22" fill="#E91E63" text-anchor="middle">ORCID</text>
+    <text x="1040" y="56" font-family="-apple-system, sans-serif" font-weight="500" font-size="11" fill="#888" text-anchor="middle" letter-spacing="1">0009-0007-0731-4247</text>
+    <text x="1040" y="72" font-family="-apple-system, sans-serif" font-weight="400" font-size="10" fill="#666" text-anchor="middle">Indexed via OpenAIRE</text>
+
+    <!-- Hackathons -->
+    <rect x="1200" y="0" width="280" height="90" fill="#1A1A3F" stroke="#9B59B6" stroke-width="2" rx="6"/>
+    <text x="1340" y="36" font-family="-apple-system, sans-serif" font-weight="900" font-size="22" fill="#9B59B6" text-anchor="middle">5 PROJECTS</text>
+    <text x="1340" y="56" font-family="-apple-system, sans-serif" font-weight="500" font-size="11" fill="#888" text-anchor="middle" letter-spacing="2">SHIPPED 2026</text>
+    <text x="1340" y="72" font-family="-apple-system, sans-serif" font-weight="400" font-size="10" fill="#666" text-anchor="middle">ECB · FORGE · CITADEL · NAECHIM · REPOMIND</text>
+  </g>
+
+  <!-- PROJECTS row -->
+  <text x="120" y="620" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="16" fill="#5A5A5A" letter-spacing="4">CURRENT PROJECTS · OPEN SOURCE</text>
+
+  <g transform="translate(120, 650)" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+    <!-- ECB -->
+    <rect x="0" y="0" width="320" height="64" rx="6" fill="#0F0F0F" stroke="#333" stroke-width="1"/>
+    <text x="20" y="28" font-weight="800" font-size="18" fill="#FFFFFF">ECB v2</text>
+    <text x="20" y="50" font-weight="400" font-size="12" fill="#888">Epistemic Curie Benchmark — phase transitions in LLMs</text>
+
+    <!-- FORGE -->
+    <rect x="340" y="0" width="320" height="64" rx="6" fill="#0F0F0F" stroke="#333" stroke-width="1"/>
+    <text x="360" y="28" font-weight="800" font-size="18" fill="#FFFFFF">FORGE</text>
+    <text x="360" y="50" font-weight="400" font-size="12" fill="#888">AI security policy generator (IBM Bob 2026)</text>
+
+    <!-- CITADEL -->
+    <rect x="680" y="0" width="320" height="64" rx="6" fill="#0F0F0F" stroke="#00CC66" stroke-width="2"/>
+    <text x="700" y="28" font-weight="800" font-size="18" fill="#00CC66">CITADEL ← live</text>
+    <text x="700" y="50" font-weight="400" font-size="12" fill="#888">Open AI evaluation infrastructure (Gemma 4 Good)</text>
+
+    <!-- NAECHIM -->
+    <rect x="1020" y="0" width="320" height="64" rx="6" fill="#0F0F0F" stroke="#333" stroke-width="1"/>
+    <text x="1040" y="28" font-weight="800" font-size="18" fill="#FFFFFF">NAECHIM</text>
+    <text x="1040" y="50" font-weight="400" font-size="12" fill="#888">Korean edtech AI Coach (K-Grand 2026)</text>
+
+    <!-- REPOMIND -->
+    <rect x="1360" y="0" width="320" height="64" rx="6" fill="#0F0F0F" stroke="#333" stroke-width="1"/>
+    <text x="1380" y="28" font-weight="800" font-size="18" fill="#FFFFFF">REPOMIND</text>
+    <text x="1380" y="50" font-weight="400" font-size="12" fill="#888">Repo-scale coding agent (AMD MI300X)</text>
+  </g>
+
+  <!-- HF / publications -->
+  <text x="120" y="800" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="16" fill="#5A5A5A" letter-spacing="4">PUBLISHED AT</text>
+  <text x="120" y="838" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="500" font-size="20" fill="#FFFFFF">Zenodo · HuggingFace (ZeroR3) · ORCID · arXiv (in review) · Kaggle · lablab.ai</text>
+
+  <!-- Bottom credit bar -->
+  <rect x="0" y="1080" width="2048" height="72" fill="#059669"/>
+  <text x="120" y="1124" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="20" fill="#FFFFFF" letter-spacing="3">github.com/SRKRZ23 · linkedin.com/in/sardor-razikov-569a5327b · razikovsardor1@gmail.com</text>
+  <text x="1928" y="1124" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="500" font-size="18" fill="#FFFFFF" text-anchor="end" letter-spacing="2">OPEN TO ACQUISITION · STRATEGIC PARTNERSHIPS</text>
+</svg>

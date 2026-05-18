@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <radialGradient id="highlight" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#047857" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Solid background (cropped to circle by YouTube) -->
+  <rect width="800" height="800" fill="url(#bgGrad)"/>
+  <rect width="800" height="800" fill="url(#highlight)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.06">
+    <line x1="100" y1="100" x2="700" y2="100" stroke="#FFF" stroke-width="2"/>
+    <line x1="100" y1="700" x2="700" y2="700" stroke="#FFF" stroke-width="2"/>
+    <line x1="100" y1="100" x2="100" y2="700" stroke="#FFF" stroke-width="2"/>
+    <line x1="700" y1="100" x2="700" y2="700" stroke="#FFF" stroke-width="2"/>
+    <circle cx="100" cy="100" r="6" fill="#FFF"/>
+    <circle cx="700" cy="100" r="6" fill="#FFF"/>
+    <circle cx="100" cy="700" r="6" fill="#FFF"/>
+    <circle cx="700" cy="700" r="6" fill="#FFF"/>
+  </g>
+
+  <!-- SR monogram (will read clearly when cropped to circle) -->
+  <!-- "S" -->
+  <text x="400" y="490" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="900" font-size="380" fill="#FFFFFF" text-anchor="middle" letter-spacing="-16">SR</text>
+
+  <!-- Small Tashkent + ORCID context (visible inside circle) -->
+  <text x="400" y="600" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="22" fill="#FFFFFF" text-anchor="middle" letter-spacing="3" opacity="0.85">TASHKENT · ML</text>
+</svg>

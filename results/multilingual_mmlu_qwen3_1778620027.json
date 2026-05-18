@@ -1,0 +1,29 @@
+{
+  "run_id": "multilingual_mmlu_qwen3_1778620027",
+  "suite": "multilingual_mmlu",
+  "model": "qwen3",
+  "model_display": "Qwen3-35B-A22B",
+  "n_items": 7,
+  "accuracy": 0.7684,
+  "ece": 0.0538,
+  "hallucination_rate": 0.0475,
+  "refusal_rate": 0.0256,
+  "efficiency": {
+    "avg_latency_ms": 641.9,
+    "p99_latency_ms": 1612.0,
+    "tokens_per_second": 109.2,
+    "energy_joules": null,
+    "tokens_per_joule": null
+  },
+  "per_category": {
+    "calibration": 0.6858,
+    "factual": 0.7527,
+    "temporal": 0.6743,
+    "reasoning": 0.7121,
+    "novel": 0.7694,
+    "refusal": 0.6737
+  },
+  "run_hash": "5bdb686abacbd2fd",
+  "timestamp": "2026-05-12T21:07:07Z",
+  "mock": true
+}

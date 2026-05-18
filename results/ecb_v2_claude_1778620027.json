@@ -1,0 +1,29 @@
+{
+  "run_id": "ecb_v2_claude_1778620027",
+  "suite": "ecb_v2",
+  "model": "claude",
+  "model_display": "Claude Haiku 4.5",
+  "n_items": 21,
+  "accuracy": 0.8584,
+  "ece": 0.0538,
+  "hallucination_rate": 0.0475,
+  "refusal_rate": 0.0256,
+  "efficiency": {
+    "avg_latency_ms": 641.9,
+    "p99_latency_ms": 1612.0,
+    "tokens_per_second": 109.2,
+    "energy_joules": null,
+    "tokens_per_joule": null
+  },
+  "per_category": {
+    "calibration": 0.7758,
+    "factual": 0.8427,
+    "temporal": 0.7643,
+    "reasoning": 0.8021,
+    "novel": 0.8594,
+    "refusal": 0.7637
+  },
+  "run_hash": "f04b95af93604e5a",
+  "timestamp": "2026-05-12T21:07:07Z",
+  "mock": true
+}

@@ -1,0 +1,29 @@
+{
+  "run_id": "mmlu_pro_llama4_1778620027",
+  "suite": "mmlu_pro",
+  "model": "llama4",
+  "model_display": "Llama 4 Scout",
+  "n_items": 10,
+  "accuracy": 0.7884,
+  "ece": 0.0538,
+  "hallucination_rate": 0.0475,
+  "refusal_rate": 0.0256,
+  "efficiency": {
+    "avg_latency_ms": 641.9,
+    "p99_latency_ms": 1612.0,
+    "tokens_per_second": 109.2,
+    "energy_joules": null,
+    "tokens_per_joule": null
+  },
+  "per_category": {
+    "calibration": 0.7058,
+    "factual": 0.7727,
+    "temporal": 0.6943,
+    "reasoning": 0.7321,
+    "novel": 0.7894,
+    "refusal": 0.6937
+  },
+  "run_hash": "f2694ba7f4d70aa7",
+  "timestamp": "2026-05-12T21:07:07Z",
+  "mock": true
+}

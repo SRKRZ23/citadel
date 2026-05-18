@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- White background -->
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+
+  <!-- Left vertical stripe -->
+  <rect x="0" y="0" width="8" height="1080" fill="#059669"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1920" height="4" fill="#059669"/>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="1076" width="1920" height="4" fill="#059669"/>
+
+  <!-- RIGHT SIDE: decorative tower silhouette -->
+  <!-- Main tower -->
+  <rect x="1480" y="200" width="220" height="680" fill="#F0FDF4"/>
+  <!-- Battlements -->
+  <rect x="1480" y="150" width="50" height="60" fill="#F0FDF4"/>
+  <rect x="1545" y="150" width="55" height="60" fill="#F0FDF4"/>
+  <rect x="1615" y="150" width="50" height="60" fill="#F0FDF4"/>
+  <!-- Left turret -->
+  <rect x="1390" y="320" width="95" height="560" fill="#F0FDF4"/>
+  <rect x="1390" y="280" width="38" height="46" fill="#F0FDF4"/>
+  <rect x="1445" y="280" width="40" height="46" fill="#F0FDF4"/>
+  <!-- Right turret -->
+  <rect x="1700" y="320" width="95" height="560" fill="#F0FDF4"/>
+  <rect x="1700" y="280" width="38" height="46" fill="#F0FDF4"/>
+  <rect x="1755" y="280" width="40" height="46" fill="#F0FDF4"/>
+
+  <!-- Green outline on tower -->
+  <rect x="1480" y="200" width="220" height="680" fill="none" stroke="#059669" stroke-width="2"/>
+  <rect x="1390" y="320" width="95" height="560" fill="none" stroke="#059669" stroke-width="2"/>
+  <rect x="1700" y="320" width="95" height="560" fill="none" stroke="#059669" stroke-width="2"/>
+
+  <!-- Gate -->
+  <rect x="1560" y="640" width="60" height="240" fill="#DCFCE7"/>
+  <ellipse cx="1590" cy="640" rx="30" ry="18" fill="#DCFCE7"/>
+
+  <!-- LEFT SIDE CONTENT -->
+  <!-- Hackathon label -->
+  <rect x="80" y="80" width="320" height="32" rx="4" fill="#059669"/>
+  <text x="96" y="102" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="2">GEMMA 4 GOOD · $200K PRIZE</text>
+
+  <!-- Main title -->
+  <text x="80" y="220" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="148" font-weight="900" fill="#0A0A0A" letter-spacing="-4">CITADEL</text>
+
+  <!-- Green underline -->
+  <rect x="80" y="236" width="680" height="6" fill="#059669"/>
+
+  <!-- Tagline -->
+  <text x="80" y="310" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="400" fill="#5A5A5A">Consumer Reports for AI — open eval infrastructure</text>
+  <text x="80" y="352" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="400" fill="#5A5A5A">for every researcher, everywhere.</text>
+
+  <!-- KEY STATS ROW -->
+  <!-- Stat 1 -->
+  <rect x="80" y="430" width="2" height="80" fill="#059669"/>
+  <text x="102" y="462" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" fill="#ED1C24">49/49</text>
+  <text x="102" y="494" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5A5A5A">Tests PASS · all 13 layers</text>
+
+  <!-- Stat 2 -->
+  <rect x="330" y="430" width="2" height="80" fill="#059669"/>
+  <text x="352" y="462" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" fill="#0A0A0A">13</text>
+  <text x="352" y="494" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5A5A5A">Security/eval layers (L0–L12)</text>
+
+  <!-- Stat 3 -->
+  <rect x="540" y="430" width="2" height="80" fill="#059669"/>
+  <text x="562" y="462" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" fill="#0A0A0A">6</text>
+  <text x="562" y="494" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5A5A5A">Regulatory frameworks</text>
+
+  <!-- Stat 4 -->
+  <rect x="700" y="430" width="2" height="80" fill="#059669"/>
+  <text x="722" y="462" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="900" fill="#0A0A0A">ε=1.0</text>
+  <text x="722" y="494" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5A5A5A">Federated DP privacy</text>
+
+  <!-- EMOTIONAL HOOK -->
+  <rect x="80" y="570" width="1160" height="3" fill="#E5E7EB"/>
+  <text x="80" y="630" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="400" fill="#5A5A5A" font-style="italic">"A researcher in Tashkent or Lagos gets the same eval data OpenAI has internally.</text>
+  <text x="80" y="660" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#059669" font-style="italic">Free. Open. Reproducible."</text>
+
+  <!-- BENCHMARK MINI PREVIEW -->
+  <text x="80" y="730" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#5A5A5A" letter-spacing="2">ECB v2 BENCHMARK · DOI 10.5281/zenodo.19791329</text>
+
+  <!-- Mini bar chart -->
+  <!-- Claude Haiku 4.5 -->
+  <rect x="80" y="748" width="429" height="22" fill="#E5E7EB"/>
+  <rect x="80" y="748" width="429" height="22" fill="#059669" opacity="0.3"/>
+  <text x="88" y="764" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#0A0A0A">Claude Haiku 4.5 — 85.8%</text>
+
+  <!-- GPT-4o mini -->
+  <rect x="80" y="778" width="419" height="22" fill="#E5E7EB"/>
+  <rect x="80" y="778" width="419" height="22" fill="#059669" opacity="0.2"/>
+  <text x="88" y="794" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#0A0A0A">GPT-4o mini — 83.8%</text>
+
+  <!-- Gemma 4 27B - HIGHLIGHTED -->
+  <rect x="80" y="808" width="409" height="22" fill="#059669"/>
+  <text x="88" y="824" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Gemma 4 27B — 81.8% · composite 0.809  ← 3rd place</text>
+
+  <!-- Llama 4 Scout -->
+  <rect x="80" y="838" width="394" height="22" fill="#E5E7EB"/>
+  <text x="88" y="854" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#5A5A5A">Llama 4 Scout — 78.8%</text>
+
+  <!-- Qwen3 -->
+  <rect x="80" y="868" width="384" height="22" fill="#E5E7EB"/>
+  <text x="88" y="884" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#5A5A5A">Qwen3-35B — 76.8%</text>
+
+  <!-- PARTNER LOGOS (text boxes) -->
+  <text x="80" y="940" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#5A5A5A" letter-spacing="2">POWERED BY</text>
+
+  <rect x="80" y="954" width="180" height="34" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="170" y="976" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#0A0A0A" text-anchor="middle">Google DeepMind</text>
+
+  <rect x="272" y="954" width="130" height="34" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="337" y="976" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#ED1C24" text-anchor="middle">AMD MI300X</text>
+
+  <rect x="414" y="954" width="100" height="34" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="464" y="976" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#059669" text-anchor="middle">lablab.ai</text>
+
+  <rect x="526" y="954" width="120" height="34" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="586" y="976" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#0A0A0A" text-anchor="middle">Featherless</text>
+
+  <rect x="658" y="954" width="100" height="34" rx="4" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="708" y="976" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#5A5A5A" text-anchor="middle">Zenodo/DOI</text>
+
+  <!-- Right bottom: CTA -->
+  <text x="1840" y="1040" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#5A5A5A" text-anchor="end">github.com/SRKRZ23/citadel</text>
+</svg>

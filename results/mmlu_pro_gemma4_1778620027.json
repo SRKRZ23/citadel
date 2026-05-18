@@ -1,0 +1,29 @@
+{
+  "run_id": "mmlu_pro_gemma4_1778620027",
+  "suite": "mmlu_pro",
+  "model": "gemma4",
+  "model_display": "Gemma 4 27B",
+  "n_items": 10,
+  "accuracy": 0.8184,
+  "ece": 0.0538,
+  "hallucination_rate": 0.0475,
+  "refusal_rate": 0.0256,
+  "efficiency": {
+    "avg_latency_ms": 641.9,
+    "p99_latency_ms": 1612.0,
+    "tokens_per_second": 109.2,
+    "energy_joules": null,
+    "tokens_per_joule": null
+  },
+  "per_category": {
+    "calibration": 0.7358,
+    "factual": 0.8027,
+    "temporal": 0.7243,
+    "reasoning": 0.7621,
+    "novel": 0.8194,
+    "refusal": 0.7237
+  },
+  "run_hash": "e8ac53615eca854a",
+  "timestamp": "2026-05-12T21:07:07Z",
+  "mock": true
+}

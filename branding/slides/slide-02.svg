@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#FFFFFF"/>
+  <!-- Left stripe -->
+  <rect x="0" y="0" width="12" height="1080" fill="#059669"/>
+  <!-- Top line -->
+  <rect x="12" y="0" width="1908" height="4" fill="#059669"/>
+  <!-- Bottom line -->
+  <rect x="12" y="1076" width="1908" height="4" fill="#0A0A0A"/>
+
+  <!-- Partner logo LEFT -->
+  <rect x="60" y="20" width="200" height="40" fill="#059669" rx="4"/>
+  <text x="160" y="46" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF" text-anchor="middle">Google DeepMind</text>
+
+  <!-- Partner logo RIGHT -->
+  <rect x="1660" y="20" width="200" height="40" fill="#0A0A0A" rx="4"/>
+  <text x="1760" y="44" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Gemma 4 Good · $200K</text>
+
+  <!-- Slide number -->
+  <text x="1860" y="50" font-family="Arial, sans-serif" font-size="18" fill="#5A5A5A" text-anchor="end">02 / 08</text>
+
+  <!-- Context label -->
+  <text x="960" y="88" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle" letter-spacing="3">OPENAI INTERNAL BENCHMARKS · EU AI ACT CONFORMITY ASSESSMENT · ZERO OPEN INFRASTRUCTURE</text>
+
+  <!-- Red sub-headline -->
+  <text x="60" y="136" font-family="Arial Black, Arial, sans-serif" font-size="22" font-weight="900" fill="#DC2626">AI evaluation is a privilege. OpenAI has it. You don't.</text>
+
+  <!-- Main headline -->
+  <text x="60" y="175" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">OpenAI evaluates GPT-4o on thousands of proprietary benchmarks. A researcher in Tashkent gets nothing.</text>
+
+  <!-- CARD 1 — EU AI Act green border -->
+  <rect x="60" y="200" width="578" height="318" fill="#F4F4F4" stroke="#E0E0E0" stroke-width="1" rx="6"/>
+  <rect x="60" y="200" width="6" height="318" fill="#059669" rx="3"/>
+  <text x="84" y="228" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#059669" letter-spacing="2">EU AI ACT · ARTICLE 43 · FULL ENFORCEMENT</text>
+  <text x="84" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">"Conformity assessments for high-risk AI</text>
+  <text x="84" y="282" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">systems shall be carried out by notified bodies."</text>
+  <text x="84" y="304" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">Third-party independent evaluation is now</text>
+  <text x="84" y="326" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">legally required.</text>
+  <line x1="84" y1="344" x2="620" y2="344" stroke="#D0D0D0" stroke-width="1"/>
+  <text x="84" y="366" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">EU AI Act enforcement for high-risk systems: 2026.</text>
+  <text x="84" y="386" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">Every AI product sold in Europe needs independent</text>
+  <text x="84" y="406" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">evaluation. No open infrastructure exists.</text>
+  <text x="84" y="505" font-family="monospace, Courier New" font-size="11" fill="#059669">eur-lex.europa.eu/AI-Act · Art. 43</text>
+
+  <!-- CARD 2 — MIT Tech Review red border -->
+  <rect x="671" y="200" width="578" height="318" fill="#F4F4F4" stroke="#E0E0E0" stroke-width="1" rx="6"/>
+  <rect x="671" y="200" width="6" height="318" fill="#DC2626" rx="3"/>
+  <text x="695" y="228" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#DC2626" letter-spacing="2">MIT TECHNOLOGY REVIEW · AI EVALUATION CRISIS · 2025</text>
+  <text x="695" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">"Benchmark contamination, cherry-picking,</text>
+  <text x="695" y="282" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">and non-reproducibility are endemic in AI</text>
+  <text x="695" y="304" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">evaluation. Labs evaluate on the same data</text>
+  <text x="695" y="326" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">they train on."</text>
+  <line x1="695" y1="344" x2="1231" y2="344" stroke="#D0D0D0" stroke-width="1"/>
+  <text x="695" y="366" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">The evaluation crisis is real. Papers retracted.</text>
+  <text x="695" y="386" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">Leaderboards gamed. No tamper-evident public</text>
+  <text x="695" y="406" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">infrastructure exists anywhere in the world.</text>
+  <text x="695" y="505" font-family="monospace, Courier New" font-size="11" fill="#DC2626">technologyreview.com/2025 · AI Eval Crisis</text>
+
+  <!-- CARD 3 — Scale AI black border -->
+  <rect x="1282" y="200" width="578" height="318" fill="#F4F4F4" stroke="#E0E0E0" stroke-width="1" rx="6"/>
+  <rect x="1282" y="200" width="6" height="318" fill="#0A0A0A" rx="3"/>
+  <text x="1306" y="228" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#0A0A0A" letter-spacing="2">SCALE AI · INTERNAL EVAL INFRASTRUCTURE · PROPRIETARY</text>
+  <text x="1306" y="260" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">Scale AI charges $50M+ per year for</text>
+  <text x="1306" y="282" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">enterprise model evaluation. Stanford HELM:</text>
+  <text x="1306" y="304" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">limited scope. BIG-Bench: archived 2024.</text>
+  <text x="1306" y="326" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#0A0A0A">Open gap: zero.</text>
+  <line x1="1306" y1="344" x2="1842" y2="344" stroke="#D0D0D0" stroke-width="1"/>
+  <text x="1306" y="366" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">The tools that exist are either proprietary ($50M/yr),</text>
+  <text x="1306" y="386" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">limited scope, or abandoned. CITADEL is the first</text>
+  <text x="1306" y="406" font-family="Arial, sans-serif" font-size="14" fill="#5A5A5A">complete open alternative.</text>
+  <text x="1306" y="505" font-family="monospace, Courier New" font-size="11" fill="#5A5A5A">helm.cs.stanford.edu · scale.com · BIG-Bench archived</text>
+
+  <!-- Gap hero numbers row -->
+  <rect x="60" y="542" width="556" height="88" fill="#FEF2F2" stroke="#DC2626" stroke-width="2" rx="6"/>
+  <text x="338" y="586" font-family="Arial Black, Arial, sans-serif" font-size="44" font-weight="900" fill="#DC2626" text-anchor="middle">$50M / yr</text>
+  <text x="338" y="620" font-family="Arial, sans-serif" font-size="15" fill="#5A5A5A" text-anchor="middle">Scale AI enterprise eval cost</text>
+
+  <rect x="682" y="542" width="556" height="88" fill="#FEF2F2" stroke="#DC2626" stroke-width="2" rx="6"/>
+  <text x="960" y="580" font-family="Arial Black, Arial, sans-serif" font-size="34" font-weight="900" fill="#DC2626" text-anchor="middle">ARCHIVED 2024</text>
+  <text x="960" y="618" font-family="Arial, sans-serif" font-size="15" fill="#5A5A5A" text-anchor="middle">BIG-Bench — no open replacement</text>
+
+  <rect x="1304" y="542" width="556" height="88" fill="#059669" rx="6"/>
+  <text x="1582" y="580" font-family="Arial Black, Arial, sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" text-anchor="middle">$0 · MIT</text>
+  <text x="1582" y="616" font-family="Arial, sans-serif" font-size="15" fill="#FFFFFF" text-anchor="middle">CITADEL — free forever</text>
+
+  <!-- They said it narrative -->
+  <text x="960" y="668" font-family="Arial Black, Arial, sans-serif" font-size="26" font-weight="900" fill="#059669" text-anchor="middle">They said it. We proved it.</text>
+
+  <!-- Black bottom bar -->
+  <rect x="60" y="688" width="1800" height="68" rx="6" fill="#0A0A0A"/>
+  <text x="960" y="715" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#059669" text-anchor="middle">CITADEL: MIT licensed · DOI-citable · Tamper-evident · Reproducible · Federated DP · Regulatory reports</text>
+  <text x="960" y="742" font-family="Arial, sans-serif" font-size="15" fill="#FFFFFF" text-anchor="middle">Any researcher · Any model · Any regulatory framework · Free forever · github.com/SRKRZ23/citadel</text>
+
+  <!-- Source -->
+  <text x="960" y="1055" font-family="monospace, Courier New" font-size="12" fill="#5A5A5A" text-anchor="middle">Sources: eur-lex.europa.eu/AI-Act Art.43 · technologyreview.com/2025 · helm.cs.stanford.edu · zenodo.org/10.5281/zenodo.19791329</text>
+</svg>

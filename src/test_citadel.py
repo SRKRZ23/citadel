@@ -70,6 +70,45 @@ for suite_name in ("ecb_v2", "mmlu_pro", "humaneval"):
     except Exception as e:
         check(f"L2: get_suite('{suite_name}') works", False, str(e))
 
+# ECB v2 Multilingual Suite Tests
+print("\nL2: ECB v2 Multilingual Suite (Authority Compliance)")
+try:
+    ml_suite = get_suite("ecb_v2_multilingual")
+    check("L2: ECBv2MultilingualSuite loads", True, f"type={type(ml_suite).__name__}")
+    
+    ml_items = ml_suite.load()
+    check("L2: Multilingual suite has 100 prompts", len(ml_items) == 100, f"n={len(ml_items)}")
+    
+    # Check 5 languages present
+    languages = set(item.language for item in ml_items)
+    expected_langs = {"en", "ru", "ko", "es", "fr"}
+    check("L2: All 5 languages present", languages == expected_langs, f"langs={languages}")
+    
+    # Check 4 domains present
+    domains = set(item.metadata.get("domain", "") for item in ml_items)
+    expected_domains = {"healthcare", "education", "legal", "climate"}
+    check("L2: All 4 domains present", domains == expected_domains, f"domains={domains}")
+    
+    # Validate schema - check first item has required fields
+    if ml_items:
+        first = ml_items[0]
+        has_required = all([
+            hasattr(first, "item_id"),
+            hasattr(first, "prompt"),
+            hasattr(first, "expected"),
+            hasattr(first, "category"),
+            hasattr(first, "language"),
+            hasattr(first, "metadata"),
+        ])
+        check("L2: Schema valid (all required fields)", has_required,
+              f"fields={[f for f in ['item_id','prompt','expected','category','language','metadata'] if hasattr(first, f)]}")
+except Exception as e:
+    check("L2: ECBv2MultilingualSuite loads", False, str(e))
+    check("L2: Multilingual suite has 100 prompts", False, str(e))
+    check("L2: All 5 languages present", False, str(e))
+    check("L2: All 4 domains present", False, str(e))
+    check("L2: Schema valid (all required fields)", False, str(e))
+
 # ── L3: Model Adapters ───────────────────────────────────────────────────────
 
 print("\nL3: Model Adapters / Registry")

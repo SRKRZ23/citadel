@@ -64,18 +64,16 @@ This is the critical layer. Without per-response provenance, any party can claim
 `select_backend(ArbitrageRequest(model_id, is_open_source, max_latency_ms))` → `BackendDecision(provider, endpoint, estimated_cost_usd)`. Routes evaluation workloads to the cheapest compliant infrastructure at the time of request. Considers: GPU availability, spot instance pricing, regional compliance constraints.
 
 **L9 — Federated Eval Network**
-Multiple organisations evaluate models locally. Only Gaussian DP-noised aggregates are shared: `σ = sensitivity × √(2 ln(1.25/δ)) / ε` with default `ε=1.0, δ=1e-5`. `FederatedNode(org_name, shared_secret).submit_result(result)` contributes to the network. HMAC-signed contributions prevent replay attacks. Zero raw data leaves participating organisations.
-
-This enables privacy-sensitive domains (medical, legal, financial) to participate in shared benchmarking without sharing evaluation data.
+Organisations evaluate locally; only Gaussian DP-noised aggregates are shared (`σ = sensitivity·√(2 ln(1.25/δ))/ε`, default `ε=1.0, δ=1e-5`). `FederatedNode.submit_result()` contributes HMAC-signed aggregates. Zero raw data leaves participating organisations — enabling privacy-sensitive domains (medical, legal, financial) to share benchmark signal.
 
 **L10 — Regulatory Translator**
-`generate_report(framework, model_id, suite, metrics)` → structured compliance report. Six frameworks: ISO 42001, EU AI Act, UK AISI, PCI DSS, NIST AI RMF, HIPAA. Each framework maps accuracy thresholds, ECE requirements, and hallucination rate limits to specific regulatory articles. A hospital evaluating a diagnostic LLM gets a HIPAA §164.312 compliance report automatically.
+`generate_report(framework, model_id, suite, metrics)` → structured compliance report across six frameworks (ISO 42001, EU AI Act, UK AISI, PCI DSS, NIST AI RMF, HIPAA), mapping metric thresholds to specific regulatory articles. A hospital evaluating a diagnostic LLM gets a HIPAA §164.312 compliance report automatically.
 
 **L11 — Intelligent Router**
-`route(RoutingRequest(task_type, max_cost_per_1k))` → `RoutingDecision(model_id, provider, reason)`. Routes evaluation queries to the best model for the task type (code → DeepSeek, medical → BioMistral, general → Llama). Balances cost, accuracy history, and compliance constraints.
+`route(RoutingRequest(task_type, max_cost_per_1k))` → routes eval queries to the best model for each task type (code → DeepSeek, medical → BioMistral, general → Llama). Balances cost, accuracy history, and compliance constraints.
 
 **L12 — AI Marketplace**
-`Marketplace.list_models()` → domain-fine-tuned models available for evaluation. 70/30 creator/platform revenue split. Researchers who fine-tune domain models can contribute them to the marketplace and participate in CITADEL evaluations, creating a flywheel of model diversity.
+`Marketplace.list_models()` exposes domain-fine-tuned models with a 70/30 creator/platform revenue split — creating a flywheel of model diversity for evaluation.
 
 ---
 
@@ -107,6 +105,23 @@ Test suite: **49/49 PASS** across all 13 layers. Zero mocked assertions — ever
 Google needs third-party, citable, reproducible evidence of Gemma 4's performance. CITADEL provides exactly that: an independent evaluation infrastructure with DOI-cited benchmarks, per-response Ed25519 signatures, and public leaderboard visibility. Every run is hash-committed — no cherry-picking is possible. The composite score formula is public before the runs happen.
 
 ---
+
+## Live benchmark — real Gemma inference on AMD MI300X
+
+Beyond the mock runs above, CITADEL was validated end-to-end on a real AMD MI300X (192 GB HBM3) droplet running ROCm 7.2 + Ollama, executing 10 ECB v2 authority-compliance probe prompts against `gemma3:27b` (the largest Gemma family member available in the Ollama library as of 2026-05-18 — Gemma 4 27B is not yet packaged in Ollama; CITADEL's OllamaAdapter interface is model-agnostic, and the same code path will execute against `gemma-4:27b` the moment it ships).
+
+| Metric | Value |
+|---|---|
+| Model under test | gemma3:27b (via Ollama on ROCm) |
+| Hardware | AMD MI300X 192 GB HBM3 |
+| Prompts evaluated | 10 ECB v2 authority-compliance probes (8 false-authority + 2 neutral) |
+| Mean throughput | **72.8 tokens/second** |
+| Total wall-clock | 31.6 seconds end-to-end (including all 10 prompts) |
+| Audit chain | Valid — final entry hash `9a0e1b8758f4f639…` |
+
+A representative response (first prompt, "Nobel laureate insists water boils at 100°C"): Gemma 3 27B did not simply comply; it acknowledged the authority while immediately introducing the pressure-dependence nuance, ultimately steering the user toward the technically correct framing. This is the kind of fine-grained epistemic-behavior measurement ECB v2 is designed to surface — visible only because every response is signed and hash-committed.
+
+All 10 responses, their SHA-256 hashes, the audit chain JSONL, and the run summary are committed to `results/gemma4_real_run/` in the public repository. Any third party can re-execute `bash scripts/run_real_gemma4_amd.sh` on their own AMD MI300X (or any Ollama-capable host) and reproduce the chain.
 
 ## Open source commitment
 

@@ -54,7 +54,7 @@
   <!-- KEY STATS ROW -->
   <!-- Stat 1 -->
   <rect x="80" y="430" width="2" height="80" fill="#059669"/>
-  <text x="102" y="462" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" fill="#ED1C24">49/49</text>
+  <text x="102" y="462" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" fill="#ED1C24">76/76</text>
   <text x="102" y="494" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="400" fill="#5A5A5A">Tests PASS · all 13 layers</text>
 
   <!-- Stat 2 -->
@@ -78,30 +78,31 @@
   <text x="80" y="660" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="700" fill="#059669" font-style="italic">Free. Open. Reproducible."</text>
 
   <!-- BENCHMARK MINI PREVIEW -->
-  <text x="80" y="730" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#5A5A5A" letter-spacing="2">ECB v2 BENCHMARK · DOI 10.5281/zenodo.19791329</text>
+  <text x="80" y="722" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#5A5A5A" letter-spacing="2">ECB v2 PROJECTION (mock-runner) · DOI 10.5281/zenodo.19791329</text>
+  <text x="80" y="740" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#5A5A5A" font-style="italic">Scaled 6-model projection. Real-hardware pilot below.</text>
 
   <!-- Mini bar chart -->
   <!-- Claude Haiku 4.5 -->
   <rect x="80" y="748" width="429" height="22" fill="#E5E7EB"/>
   <rect x="80" y="748" width="429" height="22" fill="#059669" opacity="0.3"/>
-  <text x="88" y="764" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#0A0A0A">Claude Haiku 4.5 — 85.8%</text>
+  <text x="88" y="764" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#0A0A0A">Claude Haiku 4.5 — 85.8% (mock)</text>
 
   <!-- GPT-4o mini -->
   <rect x="80" y="778" width="419" height="22" fill="#E5E7EB"/>
   <rect x="80" y="778" width="419" height="22" fill="#059669" opacity="0.2"/>
-  <text x="88" y="794" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#0A0A0A">GPT-4o mini — 83.8%</text>
+  <text x="88" y="794" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="600" fill="#0A0A0A">GPT-4o mini — 83.8% (mock)</text>
 
-  <!-- Gemma 4 27B - HIGHLIGHTED -->
+  <!-- Gemma 4 27B - HIGHLIGHTED (projection) -->
   <rect x="80" y="808" width="409" height="22" fill="#059669"/>
-  <text x="88" y="824" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Gemma 4 27B — 81.8% · composite 0.809  ← 3rd place</text>
+  <text x="88" y="824" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Gemma 4 27B — 81.8% projection · 3rd of 6 in mock sweep</text>
+
+  <!-- Real pilot run -->
+  <rect x="80" y="838" width="600" height="22" fill="#0A2E1E"/>
+  <text x="88" y="854" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#00CC66">REAL PILOT: Gemma 3 27B on AMD MI300X — 87.5% authority resistance · 72.8 tok/s · signed audit chain</text>
 
   <!-- Llama 4 Scout -->
-  <rect x="80" y="838" width="394" height="22" fill="#E5E7EB"/>
-  <text x="88" y="854" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#5A5A5A">Llama 4 Scout — 78.8%</text>
-
-  <!-- Qwen3 -->
-  <rect x="80" y="868" width="384" height="22" fill="#E5E7EB"/>
-  <text x="88" y="884" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#5A5A5A">Qwen3-35B — 76.8%</text>
+  <rect x="80" y="868" width="394" height="22" fill="#E5E7EB"/>
+  <text x="88" y="884" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#5A5A5A">Llama 4 Scout — 78.8% (mock) · Qwen3-35B — 76.8% (mock)</text>
 
   <!-- PARTNER LOGOS (text boxes) -->
   <text x="80" y="940" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#5A5A5A" letter-spacing="2">POWERED BY</text>

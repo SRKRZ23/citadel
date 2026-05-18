@@ -74,7 +74,7 @@
   <text x="104" y="670" font-family="Arial Black, Arial, sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">5</text>
   <text x="138" y="654" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#059669">Anyone can verify from public audit chain</text>
   <text x="138" y="678" font-family="monospace, Courier New" font-size="14" fill="#059669">chain.verify_chain() → all records valid</text>
-  <text x="138" y="700" font-family="Arial, sans-serif" font-size="15" fill="#059669" font-weight="700">Tested in test_citadel.py. Passes 49/49.</text>
+  <text x="138" y="700" font-family="Arial, sans-serif" font-size="15" fill="#059669" font-weight="700">Tested in test_citadel.py. Passes 76/76.</text>
 
   <!-- RIGHT — dark code block -->
   <rect x="940" y="200" width="920" height="430" fill="#0A0A0A" rx="8"/>
@@ -91,7 +91,7 @@
   <line x1="980" y1="482" x2="1820" y2="482" stroke="#333" stroke-width="1"/>
   <text x="980" y="506" font-family="monospace, Courier New" font-size="14" fill="#9CA3AF">$ python src/test_citadel.py</text>
   <text x="980" y="528" font-family="monospace, Courier New" font-size="14" fill="#9CA3AF">Running 49 tests across 13 layers...</text>
-  <text x="980" y="550" font-family="monospace, Courier New" font-size="16" fill="#86EFAC" font-weight="700">✓ L7 audit chain valid · 49/49 PASS</text>
+  <text x="980" y="550" font-family="monospace, Courier New" font-size="16" fill="#86EFAC" font-weight="700">✓ L7 audit chain valid · 76/76 PASS</text>
   <text x="980" y="580" font-family="monospace, Courier New" font-size="13" fill="#6B7280">PyNaCl Ed25519 + SHA-256 fallback</text>
   <text x="980" y="600" font-family="monospace, Courier New" font-size="13" fill="#6B7280">chain.verify_chain() → all records valid</text>
 

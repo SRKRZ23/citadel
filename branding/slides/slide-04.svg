@@ -20,13 +20,13 @@
   <text x="1860" y="50" font-family="Arial, sans-serif" font-size="18" fill="#5A5A5A" text-anchor="end">04 / 08</text>
 
   <!-- Context label -->
-  <text x="960" y="88" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle" letter-spacing="3">13 LAYERS · L0 NETWORK → L12 MARKETPLACE · ALL 49/49 TESTS PASS</text>
+  <text x="960" y="88" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#059669" text-anchor="middle" letter-spacing="3">13 LAYERS · L0 NETWORK → L12 MARKETPLACE · ALL 76/76 TESTS PASS</text>
 
   <!-- Title -->
   <text x="960" y="148" font-family="Arial Black, Arial, sans-serif" font-size="52" font-weight="900" fill="#0A0A0A" text-anchor="middle">13 layers. Every layer tested. Every layer passes.</text>
 
   <!-- Hero number -->
-  <text x="960" y="198" font-family="Arial, sans-serif" font-size="24" fill="#059669" font-weight="700" text-anchor="middle">python src/test_citadel.py → 49/49 PASS · Zero failures · All layers verified</text>
+  <text x="960" y="198" font-family="Arial, sans-serif" font-size="24" fill="#059669" font-weight="700" text-anchor="middle">python src/test_citadel.py → 76/76 PASS · Zero failures · All layers verified</text>
 
   <!-- Divider -->
   <line x1="60" y1="218" x2="1860" y2="218" stroke="#E0E0E0" stroke-width="1"/>
@@ -118,8 +118,8 @@
 
   <!-- Bottom pass bar -->
   <rect x="60" y="818" width="1800" height="68" rx="6" fill="#059669"/>
-  <text x="960" y="846" font-family="Arial Black, Arial, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" text-anchor="middle">ALL 13 LAYERS: 49/49 TESTS PASS</text>
-  <text x="960" y="874" font-family="monospace, Courier New" font-size="18" fill="#FFFFFF" text-anchor="middle">python src/test_citadel.py → 49/49 PASS · Zero failures · Reproducible anywhere</text>
+  <text x="960" y="846" font-family="Arial Black, Arial, sans-serif" font-size="32" font-weight="900" fill="#FFFFFF" text-anchor="middle">ALL 13 LAYERS: 76/76 TESTS PASS</text>
+  <text x="960" y="874" font-family="monospace, Courier New" font-size="18" fill="#FFFFFF" text-anchor="middle">python src/test_citadel.py → 76/76 PASS · Zero failures · Reproducible anywhere</text>
 
   <!-- Source -->
   <text x="960" y="1055" font-family="monospace, Courier New" font-size="12" fill="#5A5A5A" text-anchor="middle">src/test_citadel.py · src/l7_audit/audit_chain.py · src/l9_federated/dp_eval.py · doi.org/10.5281/zenodo.19791329</text>

@@ -32,17 +32,17 @@
   <text x="960" y="232" font-family="Courier New, monospace" font-size="28" fill="#059669" text-anchor="middle">ECB v2 DOI: doi.org/10.5281/zenodo.19791329</text>
 
   <!-- Hero number -->
-  <text x="960" y="310" font-family="Arial Black, Arial, sans-serif" font-size="96" font-weight="900" fill="#059669" text-anchor="middle">49/49 TESTS PASS</text>
+  <text x="960" y="310" font-family="Arial Black, Arial, sans-serif" font-size="96" font-weight="900" fill="#059669" text-anchor="middle">76/76 TESTS PASS</text>
 
   <!-- Sub: reproduce in one line -->
   <rect x="200" y="328" width="1520" height="58" fill="#0A0A0A" rx="6"/>
-  <text x="960" y="363" font-family="monospace, Courier New" font-size="22" fill="#86EFAC" text-anchor="middle">git clone github.com/SRKRZ23/citadel &amp;&amp; python src/test_citadel.py → 49/49 PASS</text>
+  <text x="960" y="363" font-family="monospace, Courier New" font-size="22" fill="#86EFAC" text-anchor="middle">git clone github.com/SRKRZ23/citadel &amp;&amp; python src/test_citadel.py → 76/76 PASS</text>
 
   <!-- Evidence pack dark box -->
   <rect x="60" y="406" width="1800" height="180" fill="#111827" rx="8"/>
   <rect x="60" y="406" width="6" height="180" fill="#059669" rx="3"/>
   <text x="84" y="436" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#059669" letter-spacing="3">FULL EVIDENCE PACK — INDEPENDENTLY VERIFIABLE</text>
-  <text x="84" y="468" font-family="monospace, Courier New" font-size="16" fill="#86EFAC">✓  python src/test_citadel.py → 49/49 PASS · Zero failures</text>
+  <text x="84" y="468" font-family="monospace, Courier New" font-size="16" fill="#86EFAC">✓  python src/test_citadel.py → 76/76 PASS · Zero failures</text>
   <text x="84" y="496" font-family="monospace, Courier New" font-size="16" fill="#86EFAC">✓  ECB v2 DOI published Zenodo · doi.org/10.5281/zenodo.19791329</text>
   <text x="84" y="524" font-family="monospace, Courier New" font-size="16" fill="#86EFAC">✓  Ed25519 chain verified · SHA-256 Merkle tamper-evident</text>
   <text x="84" y="552" font-family="monospace, Courier New" font-size="16" fill="#86EFAC">✓  All 13 layers tested · Gaussian DP formula verified · ISO 42001 + EU AI Act reports generated</text>

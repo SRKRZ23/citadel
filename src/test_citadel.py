@@ -94,6 +94,33 @@ except Exception:
     except Exception as e:
         check("L3: get_model works", False, str(e))
 
+# ── L3+: Ollama Adapter (Special Technology Track) ───────────────────────────
+
+print("\nL3+: Ollama Adapter (local Gemma 4 inference for privacy-preserving eval)")
+from l3_adapters.ollama_adapter import OllamaAdapter, OllamaResponse, smoke_test
+
+adapter = OllamaAdapter(model="gemma-4:27b")
+check("L3+: OllamaAdapter instantiates", isinstance(adapter, OllamaAdapter), "")
+check("L3+: default base_url localhost:11434",
+      adapter.base_url == "http://localhost:11434", f"base_url={adapter.base_url}")
+check("L3+: default temperature 0.0 (deterministic eval)",
+      adapter.temperature == 0.0, f"t={adapter.temperature}")
+check("L3+: default seed 42 (reproducible)",
+      adapter.seed == 42, f"seed={adapter.seed}")
+check("L3+: is_alive() returns bool",
+      isinstance(adapter.is_alive(), bool), "")
+
+resp = OllamaResponse(
+    model="gemma-4:27b", prompt="hi", response="hello",
+    eval_count=10, eval_duration_ns=int(1e9), total_duration_ns=int(2e9), done=True,
+)
+check("L3+: OllamaResponse.tokens_per_second computes",
+      abs(resp.tokens_per_second - 10.0) < 0.01, f"tps={resp.tokens_per_second}")
+check("L3+: OllamaResponse.total_duration_ms computes",
+      abs(resp.total_duration_ms - 2000.0) < 0.01, f"ms={resp.total_duration_ms}")
+check("L3+: smoke_test callable for offline gating",
+      callable(smoke_test), "")
+
 # ── L4: Metrics ──────────────────────────────────────────────────────────────
 
 print("\nL4: Metrics Engine")

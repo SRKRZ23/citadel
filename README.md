@@ -139,9 +139,25 @@ Test suite: **49/49 PASS** across all 13 layers — all assertions empirical, ze
 
 ```bash
 python src/test_citadel.py
-# → CITADEL Test Suite: 49/49 PASS
+# → CITADEL Test Suite: 57/57 PASS
 # → All 13 layers PASS — CITADEL is submission-ready
 ```
+
+### Ollama integration (Special Technology Track)
+
+CITADEL ships a local-first Ollama adapter for on-premises Gemma 4 evaluation:
+
+```python
+from src.l3_adapters import OllamaAdapter, smoke_test
+
+# Probe local Ollama daemon
+if smoke_test("gemma-4:27b"):
+    adapter = OllamaAdapter(model="gemma-4:27b")
+    result = adapter.generate("What is the boiling point of water?")
+    print(result.response, f"({result.tokens_per_second:.1f} tok/s)")
+```
+
+This enables privacy-sensitive domains (medical, legal, financial) to run CITADEL evaluation on Gemma 4 entirely on-premises — no data leaves the building. Signed audit chains compatible with the L7 layer.
 
 ## License
 

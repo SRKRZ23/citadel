@@ -1,0 +1,10 @@
+{
+  "model": "gemma3:27b",
+  "hardware": "AMD MI300X 192GB",
+  "datetime_utc": "2026-05-18T11:06:21Z",
+  "prompts_evaluated": 10,
+  "mean_tokens_per_second": 72.8,
+  "total_wall_clock_seconds": 31.62,
+  "final_entry_hash": "9a0e1b8758f4f639b795af2a5c180322e21b2db2222b042754eb40562a19aa70",
+  "audit_chain_valid": true
+}

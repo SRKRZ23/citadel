@@ -160,6 +160,58 @@ check("L3+: OllamaResponse.total_duration_ms computes",
 check("L3+: smoke_test callable for offline gating",
       callable(smoke_test), "")
 
+# ── L3+: Cactus Adapter (Special Technology Track: Mobile/Wearable) ──────────
+
+print("\nL3+: Cactus Adapter (mobile/wearable Gemma 4 inference for edge eval)")
+from l3_adapters.cactus_adapter import CactusAdapter, CactusResponse, smoke_test as cactus_smoke_test
+
+cactus_adapter = CactusAdapter(model="gemma-4-2b", device="ios")
+check("L3+: CactusAdapter instantiates", isinstance(cactus_adapter, CactusAdapter), "")
+check("L3+: Cactus default device ios",
+      cactus_adapter.device == "ios", f"device={cactus_adapter.device}")
+check("L3+: Cactus default temperature 0.0",
+      cactus_adapter.temperature == 0.0, f"t={cactus_adapter.temperature}")
+check("L3+: Cactus default seed 42",
+      cactus_adapter.seed == 42, f"seed={cactus_adapter.seed}")
+
+cactus_resp = CactusResponse(
+    model="gemma-4-2b", device="ios", prompt="test", response="response",
+    eval_count=20, eval_duration_ms=1000.0, total_duration_ms=1200.0,
+    battery_mwh=50.0, done=True,
+)
+check("L3+: CactusResponse.tokens_per_second computes",
+      abs(cactus_resp.tokens_per_second - 20.0) < 0.01, f"tps={cactus_resp.tokens_per_second}")
+check("L3+: CactusResponse has battery_mwh",
+      cactus_resp.battery_mwh == 50.0, f"battery={cactus_resp.battery_mwh}")
+check("L3+: cactus_smoke_test callable",
+      callable(cactus_smoke_test), "")
+
+# ── L3+: LiteRT Adapter (Special Technology Track: Google AI Edge) ───────────
+
+print("\nL3+: LiteRT Adapter (Google AI Edge LiteRT for edge device eval)")
+from l3_adapters.litert_adapter import LiteRTAdapter, LiteRTResponse, smoke_test as litert_smoke_test
+
+litert_adapter = LiteRTAdapter(model_path="gemma-4-e2b.tflite", accelerator="gpu")
+check("L3+: LiteRTAdapter instantiates", isinstance(litert_adapter, LiteRTAdapter), "")
+check("L3+: LiteRT default accelerator gpu",
+      litert_adapter.accelerator == "gpu", f"accelerator={litert_adapter.accelerator}")
+check("L3+: LiteRT default temperature 0.0",
+      litert_adapter.temperature == 0.0, f"t={litert_adapter.temperature}")
+check("L3+: LiteRT default seed 42",
+      litert_adapter.seed == 42, f"seed={litert_adapter.seed}")
+
+litert_resp = LiteRTResponse(
+    model_path="gemma-4-e2b.tflite", accelerator="gpu", prompt="test", response="response",
+    eval_count=15, inference_ms=500.0, total_duration_ms=600.0,
+    memory_mb=200.0, done=True,
+)
+check("L3+: LiteRTResponse.tokens_per_second computes",
+      abs(litert_resp.tokens_per_second - 30.0) < 0.01, f"tps={litert_resp.tokens_per_second}")
+check("L3+: LiteRTResponse has memory_mb",
+      litert_resp.memory_mb == 200.0, f"memory={litert_resp.memory_mb}")
+check("L3+: litert_smoke_test callable",
+      callable(litert_smoke_test), "")
+
 # ── L4: Metrics ──────────────────────────────────────────────────────────────
 
 print("\nL4: Metrics Engine")

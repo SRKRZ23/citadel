@@ -15,7 +15,11 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+# ROOT = the CITADEL repo root. The app file lives at
+#   <repo-root>/src/l6_dashboard/app.py
+# so two `.parent` hops gets us to the repo root on both local dev and on
+# Streamlit Community Cloud (`/mount/src/<repo-name>`).
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 RESULTS_DIR = ROOT / "results"
 

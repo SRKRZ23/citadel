@@ -135,11 +135,11 @@ CITADEL ──evaluates all models──► ATLAS multi-agent pipeline
 
 ## Scientific verification
 
-Test suite: **49/49 PASS** across all 13 layers — all assertions empirical, zero untested claims.
+Test suite: **76/76 PASS** across all 13 layers + extended adapters (Ollama, Cactus, LiteRT) + ECB v2 multilingual suite — all assertions empirical, zero untested claims.
 
 ```bash
 python src/test_citadel.py
-# → CITADEL Test Suite: 57/57 PASS
+# → CITADEL Test Suite: 76/76 PASS
 # → All 13 layers PASS — CITADEL is submission-ready
 ```
 

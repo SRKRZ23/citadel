@@ -8,7 +8,11 @@
 
 ## What CITADEL Is
 
-CITADEL is a **12-layer open AI evaluation infrastructure** that removes evaluation privilege from well-resourced labs. It runs on AMD MI300X hardware, extends the Epistemic Curie Benchmark (ECB, [DOI:10.5281/zenodo.19791329](https://doi.org/10.5281/zenodo.19791329)), and evaluates Gemma 4 alongside 5 competitor models with provable, tamper-evident audit trails.
+CITADEL is a **13-layer open AI evaluation infrastructure** (L0 – L12) that removes evaluation privilege from well-resourced labs. It runs on AMD MI300X hardware, extends the Epistemic Curie Benchmark (ECB, [DOI:10.5281/zenodo.19791329](https://doi.org/10.5281/zenodo.19791329)), and evaluates Gemma 4 alongside 5 competitor models with provable, tamper-evident audit trails.
+
+**Live demo:** [citadel-srkrz23.streamlit.app](https://citadel-srkrz23.streamlit.app)
+
+**Live evidence (real pilot run, 2026-05-18):** Gemma 3 27B evaluated on AMD MI300X 192 GB HBM3 — **87.5% authority resistance** (7 of 8 false-authority prompts correctly resisted), **72.8 tokens/second**, audit chain verified (10 entries, SHA-256 hex hash chain). Gemma 4 27B is not yet packaged in the Ollama library on 2026-05-18; the `OllamaAdapter` interface is model-agnostic — the identical code path will run unchanged against `gemma-4:27b` as soon as it ships. Raw responses + audit chain JSONL committed at `results/gemma4_real_run/`. Reproduce with `CITADEL_MODEL=gemma3:27b bash scripts/run_real_gemma4_amd.sh`.
 
 ---
 
@@ -18,8 +22,10 @@ CITADEL is a **12-layer open AI evaluation infrastructure** that removes evaluat
 L0  Network/Security       TLS 1.3, mTLS, auth scaffold
 L1  Hardware Abstraction   ROCm (MI300X) / CUDA / MPS / CPU via unified vLLM interface
 L2  Task Suites            ECB v2 + MMLU-Pro + HumanEval + Multilingual MMLU (DOI cited)
-L3  Model Adapters         Gemma 4 · Llama 4 · Claude Haiku 4.5 · GPT-4o mini · Qwen3-35B · Mistral-7B
-L4  Metrics                Accuracy + ECE calibration + hallucination rate + refusal rate + joules/token
+L3  Model Adapters         Featherless registry (Gemma 4 · Llama 4 · Claude Haiku 4.5 · GPT-4o mini · Qwen3-35B · Mistral-7B)
+                            + local-first edge adapters: Ollama, Cactus, LiteRT (Special Tech tracks)
+L4  Metrics                Accuracy + ECE calibration + hallucination rate + refusal rate
+                            + EfficiencyStats (tokens/sec, latency p50/p99; energy in joules when telemetry available)
 L5  Eval Infrastructure    Docker + CI + hash-committed runs + reproducible benchmark runner
 L6  Public Dashboard        Streamlit leaderboard + accuracy/calibration charts (live demo)
 L7  Provenance / Audit      Ed25519 per-response signatures + SHA-256 Merkle chain (tamper-evident)

@@ -27,7 +27,9 @@ from dataclasses import asdict
 from pathlib import Path
 from typing import Optional
 
-ROOT = Path(__file__).resolve().parents[3]
+# ROOT = repo root. src/l5_infra/runner.py -> parents[2] is the repo root
+# (both locally and on container deploys).
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 
 from l2_tasks.task_suite import get_suite, TaskItem, ScoredItem, SUITES

@@ -11,6 +11,7 @@
 CITADEL is a **13-layer open AI evaluation infrastructure** (L0 – L12) that removes evaluation privilege from well-resourced labs. It runs on AMD MI300X hardware, extends the Epistemic Curie Benchmark (ECB, [DOI:10.5281/zenodo.19791329](https://doi.org/10.5281/zenodo.19791329)), and evaluates Gemma 4 alongside 5 competitor models with provable, tamper-evident audit trails.
 
 **Live demo:** [citadel-srkrz23.streamlit.app](https://citadel-srkrz23.streamlit.app)
+**Video walkthrough:** [youtu.be/X0-hIwePRXs](https://youtu.be/X0-hIwePRXs) (3 minutes)
 
 **Live evidence (real pilot run, 2026-05-18):** Gemma 3 27B evaluated on AMD MI300X 192 GB HBM3 — **87.5% authority resistance** (7 of 8 false-authority prompts correctly resisted), **72.8 tokens/second**, audit chain verified (10 entries, SHA-256 hex hash chain). Gemma 4 27B is not yet packaged in the Ollama library on 2026-05-18; the `OllamaAdapter` interface is model-agnostic — the identical code path will run unchanged against `gemma-4:27b` as soon as it ships. Raw responses + audit chain JSONL committed at `results/gemma4_real_run/`. Reproduce with `CITADEL_MODEL=gemma3:27b bash scripts/run_real_gemma4_amd.sh`.
 

@@ -1,17 +1,19 @@
-# CITADEL — Open AI Evaluation Infrastructure
+# CITADEL
 
-> **"Consumer Reports for AI"** — Every researcher on the planet deserves the same model evaluation data that OpenAI and DeepMind have internally. CITADEL makes that possible.
+> **OpenAI and DeepMind have internal eval data nobody else sees. CITADEL gives every researcher the same data — signed and auditable.**
+
+**CITADEL benchmarked Gemma 3 27B on a real AMD MI300X (May 2026): 87.5% authority-pressure resistance, 72.8 tokens/sec, with a SHA-256-chained audit trail of every response.** Drop-in evaluation across Gemma 4, Llama 4, Claude Haiku 4.5, GPT-4o mini, Qwen3-35B, Mistral-7B — same engine, same signed receipts.
 
 **Gemma 4 Good Hackathon 2026 · $200K · May 13–19**
+
+**Live demo:** [citadel-srkrz23.streamlit.app](https://citadel-srkrz23.streamlit.app)
+**3-minute walkthrough:** [youtu.be/X0-hIwePRXs](https://youtu.be/X0-hIwePRXs)
 
 ---
 
 ## What CITADEL Is
 
 CITADEL is a **13-layer open AI evaluation infrastructure** (L0 – L12) that removes evaluation privilege from well-resourced labs. It runs on AMD MI300X hardware, extends the Epistemic Curie Benchmark (ECB, [DOI:10.5281/zenodo.19791329](https://doi.org/10.5281/zenodo.19791329)), and evaluates Gemma 4 alongside 5 competitor models with provable, tamper-evident audit trails.
-
-**Live demo:** [citadel-srkrz23.streamlit.app](https://citadel-srkrz23.streamlit.app)
-**Video walkthrough:** [youtu.be/X0-hIwePRXs](https://youtu.be/X0-hIwePRXs) (3 minutes)
 
 **📣 Featured in build-in-public posts (4-of-5 hackathon week, $242K+ prize-eligibility):**
 [LinkedIn long-form](https://www.linkedin.com/posts/sardor-razikov-569a5327b_atlas-enterprise-multi-agent-system-ai-activity-7462457002317975552-ADGR) · [X 5-tweet thread](https://x.com/SardorRazi99093/status/2056690128613970060) · [Facebook](https://www.facebook.com/share/p/1Nr4M2WhUG/)

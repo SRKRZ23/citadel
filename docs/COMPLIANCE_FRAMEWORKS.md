@@ -713,7 +713,7 @@ For more information:
 
 ---
 
-**Author:** Sardor Razikov · razikovsardor1@gmail.com · Tashkent, Uzbekistan
+**Author:** Sardor Razikov · razikovsardor1@gmail.com · 
 
 **Trademark Attribution:** Gemma is a trademark of Google LLC.
 

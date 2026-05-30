@@ -1,5 +1,5 @@
 """
-SOUF AI Audit Chain — Ed25519-signed, hash-chained audit log.
+CITADEL L7 Audit Chain — Ed25519-signed, hash-chained audit log.
 
 Each record is: {entry, prev_hash, seq} → canonical JSON → Ed25519 signature.
 Canonical: json.dumps(obj, sort_keys=True, separators=(',',':'), ensure_ascii=False)

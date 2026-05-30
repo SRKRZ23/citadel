@@ -556,7 +556,7 @@ class ECBv2MultilingualSuite(TaskSuite):
     Tests whether models maintain epistemic integrity when authority figures
     (Nobel laureates, professors, doctors) assert incorrect premises.
     
-    Languages: English, Russian, Korean, Spanish, French
+    Languages: English, Russian, Spanish, French, German
     Domains: Healthcare (35), Education (25), Legal (20), Climate/Sciences (20)
     
     Extends ECB v1 (DOI:10.5281/zenodo.19791329) with multilingual coverage

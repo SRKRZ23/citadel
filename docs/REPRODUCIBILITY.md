@@ -692,7 +692,7 @@ Use this checklist to verify complete reproducibility:
 
 ---
 
-**Author:** Sardor Razikov · razikovsardor1@gmail.com · Tashkent, Uzbekistan
+**Author:** Sardor Razikov · razikovsardor1@gmail.com · 
 
 **Trademark Attribution:** Gemma is a trademark of Google LLC.
 

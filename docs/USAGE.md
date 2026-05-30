@@ -313,7 +313,7 @@ coordinator = FederatedCoordinator(shared_secret=shared_secret)
 
 # Node setup (each organization runs this)
 node = FederatedNode(
-    org_name="hospital_tashkent",
+    org_name="hospital_example",
     shared_secret=shared_secret
 )
 
@@ -414,8 +414,8 @@ for model in models:
 
 # Register a new model (70/30 revenue split)
 mp.register_model(
-    model_id="gemma4-medical-tashkent",
-    creator="hospital_tashkent",
+    model_id="gemma4-medical-pilot",
+    creator="hospital_example",
     domain="medical",
     price_per_1k_tokens=0.005,
     base_model="gemma-4-9b"
@@ -932,8 +932,8 @@ class MyCustomSuite(TaskSuite):
         return [
             TaskItem(
                 item_id="CUSTOM-001",
-                prompt="What is the capital of Uzbekistan?",
-                expected="Tashkent",
+                prompt="What is the capital of ?",
+                expected="",
                 category="geography"
             ),
             TaskItem(
@@ -1062,7 +1062,7 @@ ollama pull gemma-4:9b  # Instead of 27b
 
 ---
 
-**Author:** Sardor Razikov · razikovsardor1@gmail.com · Tashkent, Uzbekistan
+**Author:** Sardor Razikov · razikovsardor1@gmail.com · 
 
 **Trademark Attribution:** Gemma is a trademark of Google LLC. CITADEL evaluates Gemma 4 alongside other frontier models; this project is not affiliated with or endorsed by Google.
 

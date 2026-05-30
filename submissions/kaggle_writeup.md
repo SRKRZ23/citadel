@@ -1,15 +1,15 @@
 # CITADEL: Open AI Evaluation Infrastructure
 ## Gemma 4 27B in a Fair Fight
 
-**Built solo, from Tashkent.** Every researcher on the planet deserves the same model evaluation data that OpenAI and DeepMind have internally. CITADEL is the open infrastructure that makes that possible — and gives open models like Gemma 4 a transparent, auditable head-to-head with closed frontier systems.
+**Built solo, from .** Every researcher on the planet deserves the same model evaluation data that OpenAI and DeepMind have internally. CITADEL is the open infrastructure that makes that possible — and gives open models like Gemma 4 a transparent, auditable head-to-head with closed frontier systems.
 
 ---
 
 ## Motivation — why I built this
 
-I'm Sardor Razikov, an independent AI/ML researcher in Tashkent, Uzbekistan. Earlier this year I published the **Epistemic Curie Benchmark** ([DOI:10.5281/zenodo.19791329](https://doi.org/10.5281/zenodo.19791329)) — a physics-motivated framework for measuring when LLMs surrender independent reasoning under authority pressure. While running ECB across frontier models, I hit the wall every researcher outside well-resourced labs hits: **there is no shared, auditable evaluation infrastructure**.
+I'm Sardor Razikov, an independent AI/ML researcher in . Earlier this year I published the **Epistemic Curie Benchmark** ([DOI:10.5281/zenodo.19791329](https://doi.org/10.5281/zenodo.19791329)) — a physics-motivated framework for measuring when LLMs surrender independent reasoning under authority pressure. While running ECB across frontier models, I hit the wall every researcher outside well-resourced labs hits: **there is no shared, auditable evaluation infrastructure**.
 
-OpenAI evaluates GPT-4o on thousands of proprietary benchmarks. A researcher in Tashkent, Lagos, or Manila works with whatever they can find online. Two researchers running "the same benchmark" can't verify they evaluated the same prompts, temperatures, or model versions. No chain of custody. No compliance reports. No third-party verifiability.
+OpenAI evaluates GPT-4o on thousands of proprietary benchmarks. A researcher in , Lagos, or Manila works with whatever they can find online. Two researchers running "the same benchmark" can't verify they evaluated the same prompts, temperatures, or model versions. No chain of custody. No compliance reports. No third-party verifiability.
 
 The core problem is infrastructure. Reproducibility, tamper-evidence, multi-model comparability, and regulatory mapping require engineering investment individual researchers cannot justify. **CITADEL provides this as open infrastructure** and centers Gemma 4 27B as a first-class participant.
 
@@ -19,7 +19,7 @@ Without honest, transparent evaluation, open frontier models lose to closed-vend
 
 ## Case Study: Rural Hospital Deploying Gemma 4 27B for Triage
 
-**Scenario:** A 120-bed hospital in Tashkent faces intermittent internet and cannot rely on cloud AI for emergency triage. They deploy Gemma 4 27B via CITADEL's OllamaAdapter on a local AMD MI300X server.
+**Scenario:** A 120-bed hospital in  faces intermittent internet and cannot rely on cloud AI for emergency triage. They deploy Gemma 4 27B via CITADEL's OllamaAdapter on a local AMD MI300X server.
 
 **Implementation:** Medical staff evaluate Gemma 4's triage recommendations against 200 historical cases. L7 audit chain cryptographically signs every response. L10 regulatory translator auto-generates HIPAA §164.312 compliance reports mapping hallucination rates to specific requirements. L4 metrics compute authority compliance using ECB v2 prompts — measuring inappropriate deference to outdated guidelines.
 
@@ -154,8 +154,8 @@ CITADEL is fully open source (MIT). All benchmark data, code, manifests, and aud
 
 ---
 
-**Author:** Sardor Razikov (sole author) · razikovsardor1@gmail.com · Tashkent, Uzbekistan.
+**Author:** Sardor Razikov (sole author) · razikovsardor1@gmail.com · .
 
 **Trademark attribution:** Gemma is a trademark of Google LLC. CITADEL evaluates Gemma 4 alongside other frontier models; this project is not affiliated with or endorsed by Google.
 
-*CITADEL — Part of an AI Reliability Ecosystem: SOUF AI · FORGE · ATLAS · CITADEL (all authored by Sardor Razikov).*
+*CITADEL — by Sardor Razikov.*

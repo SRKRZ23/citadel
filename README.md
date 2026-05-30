@@ -106,7 +106,7 @@ CITADEL evaluates Gemma 4 against 5 competitors on ECB v2 — the same benchmark
 
 ## The Emotional Beneficiary
 
-A researcher in **Tashkent or Lagos** gets the same eval data that OpenAI has internally. **Free. Open. Reproducible.**
+A researcher in ** or Lagos** gets the same eval data that OpenAI has internally. **Free. Open. Reproducible.**
 
 ---
 
@@ -129,19 +129,14 @@ python src/l5_infra/runner.py --suite ecb_v2 --model gemma4
 
 ---
 
-## Connection to the AI Reliability Ecosystem
+## Architecture stack
 
-```
-FORGE ──governance policies──► SOUF AI DPI
-  │                                │
-  │                         inline inspection
-  │                                ▼
-CITADEL ──evaluates all models──► ATLAS multi-agent pipeline
-    │
-    └── L7 Ed25519 audit chain (reused from SOUF AI)
-    └── ECB v2 DOI (citable external benchmark)
-    └── AMD MI300X (sponsors: Gemma 4 Good)
-```
+CITADEL is a 7-layer evaluation infrastructure:
+- L1-L5: Multilingual benchmark tasks, sandbox runners, and model integration
+- L6: Telemetry + Confluence-style reporting
+- L7: Ed25519-signed audit chain (cryptographic provenance for evaluation runs)
+
+Built on Gemma 4 + AMD MI300X. ECB v2 DOI provides the citable external benchmark.
 
 ---
 
@@ -175,7 +170,7 @@ This enables privacy-sensitive domains (medical, legal, financial) to run CITADE
 
 MIT — all benchmarks, code, and results are open.
 
-**Author:** Sardor Razikov (sole author). razikovsardor1@gmail.com · Tashkent, Uzbekistan.
+**Author:** Sardor Razikov (sole author). razikovsardor1@gmail.com · .
 
 ## Attribution
 
